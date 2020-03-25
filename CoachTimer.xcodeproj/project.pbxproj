@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1813DA2C241E40C600688BAE /* Swim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813DA2B241E40C600688BAE /* Swim.swift */; };
+		183223F224294F2E0015BA3D /* RunDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183223F124294F2E0015BA3D /* RunDetail.swift */; };
 		186BFC47241A7FDE0035A0DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186BFC46241A7FDE0035A0DF /* AppDelegate.swift */; };
 		186BFC49241A7FDE0035A0DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186BFC48241A7FDE0035A0DF /* SceneDelegate.swift */; };
 		186BFC4B241A7FDE0035A0DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186BFC4A241A7FDE0035A0DF /* ContentView.swift */; };
 		186BFC4D241A7FE00035A0DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 186BFC4C241A7FE00035A0DF /* Assets.xcassets */; };
 		186BFC50241A7FE00035A0DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 186BFC4F241A7FE00035A0DF /* Preview Assets.xcassets */; };
 		186BFC53241A7FE00035A0DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186BFC51241A7FE00035A0DF /* LaunchScreen.storyboard */; };
+		186BFC5B241A7FFE0035A0DF /* SwimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186BFC5A241A7FFE0035A0DF /* SwimmerView.swift */; };
+		186EDD2C2424208000D4D4BC /* SwimmerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EDD2B2424207F00D4D4BC /* SwimmerDetail.swift */; };
+		1876271924292DE2001470D9 /* savedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876271824292DE2001470D9 /* savedView.swift */; };
+		1876271D24293242001470D9 /* savedDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876271C24293242001470D9 /* savedDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1813DA2B241E40C600688BAE /* Swim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Swim.swift; path = "../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/Swim.swift"; sourceTree = "<group>"; };
+		183223F124294F2E0015BA3D /* RunDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunDetail.swift; sourceTree = "<group>"; };
 		186BFC43241A7FDE0035A0DF /* CoachTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoachTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		186BFC46241A7FDE0035A0DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		186BFC48241A7FDE0035A0DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +32,10 @@
 		186BFC4F241A7FE00035A0DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		186BFC52241A7FE00035A0DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		186BFC54241A7FE00035A0DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		186BFC5A241A7FFE0035A0DF /* SwimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimmerView.swift; sourceTree = "<group>"; };
+		186EDD2B2424207F00D4D4BC /* SwimmerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimmerDetail.swift; sourceTree = "<group>"; };
+		1876271824292DE2001470D9 /* savedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = savedView.swift; sourceTree = "<group>"; };
+		1876271C24293242001470D9 /* savedDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = savedDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +71,12 @@
 				186BFC46241A7FDE0035A0DF /* AppDelegate.swift */,
 				186BFC48241A7FDE0035A0DF /* SceneDelegate.swift */,
 				186BFC4A241A7FDE0035A0DF /* ContentView.swift */,
+				1876271824292DE2001470D9 /* savedView.swift */,
+				1876271C24293242001470D9 /* savedDetail.swift */,
+				183223F124294F2E0015BA3D /* RunDetail.swift */,
+				186BFC5A241A7FFE0035A0DF /* SwimmerView.swift */,
+				186EDD2B2424207F00D4D4BC /* SwimmerDetail.swift */,
+				1813DA2B241E40C600688BAE /* Swim.swift */,
 				186BFC4C241A7FE00035A0DF /* Assets.xcassets */,
 				186BFC51241A7FE00035A0DF /* LaunchScreen.storyboard */,
 				186BFC54241A7FE00035A0DF /* Info.plist */,
@@ -146,9 +164,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1813DA2C241E40C600688BAE /* Swim.swift in Sources */,
+				183223F224294F2E0015BA3D /* RunDetail.swift in Sources */,
 				186BFC47241A7FDE0035A0DF /* AppDelegate.swift in Sources */,
+				1876271924292DE2001470D9 /* savedView.swift in Sources */,
 				186BFC49241A7FDE0035A0DF /* SceneDelegate.swift in Sources */,
+				1876271D24293242001470D9 /* savedDetail.swift in Sources */,
+				186BFC5B241A7FFE0035A0DF /* SwimmerView.swift in Sources */,
 				186BFC4B241A7FDE0035A0DF /* ContentView.swift in Sources */,
+				186EDD2C2424208000D4D4BC /* SwimmerDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,8 +308,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CoachTimer/CoachTimer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CoachTimer/Preview Content\"";
+				DEVELOPMENT_TEAM = 8K2ZZF7H6F;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CoachTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -294,6 +320,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tri.CoachTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -303,8 +330,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CoachTimer/CoachTimer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CoachTimer/Preview Content\"";
+				DEVELOPMENT_TEAM = 8K2ZZF7H6F;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CoachTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -313,6 +342,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tri.CoachTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
