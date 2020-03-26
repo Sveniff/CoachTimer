@@ -15,7 +15,7 @@ struct SavedView: View {
         NavigationView{
             List{
                 if saved.savedObject.count > 0 {
-                    ForEach(Range(0...saved.savedObject.endIndex-1)){ swimmer in
+                    ForEach(Range(0...saved.savedObject.endIndex-1), id:\.self){ swimmer in
                         NavigationLink(destination: savedDetail(saved: self.saved.savedObject[swimmer])) {
                             Text(self.saved.savedObject[swimmer].name)
                         }

@@ -24,10 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            guard let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext else {
-                fatalError("Unable to read managed object context.")
-            }
-            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(swimmers).environmentObject(saved).environment(\.managedObjectContext, context))
+            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(swimmers).environmentObject(saved))
             self.window = window
             window.makeKeyAndVisible()
         }

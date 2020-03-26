@@ -13,10 +13,10 @@ struct savedDetail: View {
     var body: some View {
         VStack{
             List{
-                if saved.runs.count > 0 {
-                    ForEach(Range(0...saved.runs.endIndex-1)) { run in
+                if saved.runs.count != 0 {
+                    ForEach(Range(0...saved.runs.count-1), id:\.self) { run in
                         NavigationLink(destination: RunDetail(swimmer: self.saved.runs[run])) {
-                                                Text("\(self.saved.runs[run].date)  \(convertCountToTimeString(counter: self.saved.runs[run].laps[self.saved.runs[run].laps.endIndex-1]))")
+                            Text("\(self.saved.runs[run].date)  \(convertCountToTimeString(counter: self.saved.runs[run].time))")
                         }
                     }.onDelete(perform: deleteTime)
                 }
