@@ -12,7 +12,6 @@ struct SwimmerDetail: View {
     @State var showAlert = false
     @ObservedObject var swimmer: Swimmer
     @EnvironmentObject var saved: SaveHandler
-    @Environment(\.managedObjectContext) var managedObjectContext
     var body: some View {
         VStack{
             Text(self.swimmer.name).padding().font(.custom("", size: 80)).multilineTextAlignment(.center).fixedSize().frame(width: UIScreen.main.bounds.width, height: 100)
@@ -28,6 +27,9 @@ struct SwimmerDetail: View {
                 }, secondaryButton: .cancel())
             }.frame(width: UIScreen.main.bounds.width/4, height: 40).buttonStyle(BorderlessButtonStyle()).multilineTextAlignment(.center)
             HStack{
+                if self.swimmer.saved || !self.swimmer.finished{
+                    Spacer()
+                }
                 TextField("Distance", text: $swimmer.stringDist, onCommit: {self.swimmer.changeDist()}).frame(width: UIScreen.main.bounds.width/6, height: 40).multilineTextAlignment(.trailing)
                 Text("m").frame(width: UIScreen.main.bounds.width/16, height: 40)
                 TextField("Lap length", text: $swimmer.stringLapLength, onCommit: {self.swimmer.changeLaplength()}).frame(width: UIScreen.main.bounds.width/6, height: 40).multilineTextAlignment(.trailing)
@@ -41,7 +43,7 @@ struct SwimmerDetail: View {
                     Text("Update")
                 }.frame(width: UIScreen.main.bounds.width/5, height: 40).multilineTextAlignment(.center)
                 Spacer()
-                if self.swimmer.finished {
+                if self.swimmer.finished && !self.swimmer.saved{
                     Button(action: {
                         let nameIndex = self.saved.names.firstIndex(of: self.swimmer.name)
                         if nameIndex == nil{
@@ -52,6 +54,7 @@ struct SwimmerDetail: View {
                         else{
                             self.saved.savedObject[self.saved.names.firstIndex(of: self.swimmer.name) ?? -1].runs.append(run(swimmer: self.swimmer))
                         }
+                        self.swimmer.saved = true
                     }){
                     Text("Save")
                     }.frame(width: UIScreen.main.bounds.width/6, height: 40).multilineTextAlignment(.center)
@@ -102,11 +105,12 @@ struct SwimmerDetail_Previews: PreviewProvider {
 
 func convertCountToTimeString(counter: Int) -> String {
     let millseconds = counter % 100
-    let seconds = counter / 100
+    var seconds = counter / 100
     let minutes = seconds / 60
+    seconds %= 60
     
     var millsecondsString = "\(millseconds)"
-    var secondsString = "\(seconds%60)"
+    var secondsString = "\(seconds)"
     var minutesString = "\(minutes)"
     
     if millseconds < 10 {

@@ -9,7 +9,6 @@
 import SwiftUI
 struct ContentView: View {
     @EnvironmentObject private var swimmers: SwimHandler
-    @Environment(\.managedObjectContext) var managedObjectContext
     var body: some View {
         TabView{
             NavigationView {

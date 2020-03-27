@@ -10,7 +10,6 @@ import SwiftUI
 
 struct SavedView: View {
     @EnvironmentObject var saved: SaveHandler
-    @Environment(\.managedObjectContext) var managedObjectContext
     var body: some View {
         NavigationView{
             List{
