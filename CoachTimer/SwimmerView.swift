@@ -14,14 +14,14 @@ struct SwimmerView: View {
     @State var showAlert = false
     var body: some View {
         HStack{
-            Spacer().fixedSize()
+            Spacer()
             if !self.swimmer.timer.isValid {
-                TextField("Name", text: $swimmer.name).multilineTextAlignment(.leading).frame(width: UIScreen.main.bounds.width/3, height: 60).font(.custom("", size: 30))
+                TextField("Name", text: $swimmer.name).multilineTextAlignment(.leading).frame(width: 100, height: 60).font(.custom("", size: 30))
             }
             else{
                 Text(self.swimmer.name)
                     .multilineTextAlignment(.leading)
-                    .frame(width: UIScreen.main.bounds.width/3, height: 60)
+                    .frame(width: 100, height: 60)
                     .font(.custom("", size: 30))
             }
             Divider()
@@ -34,22 +34,23 @@ struct SwimmerView: View {
                     }, secondaryButton: .cancel())
                 }
                 .buttonStyle(BorderlessButtonStyle())
-                .fixedSize()
-                .frame(width: UIScreen.main.bounds.width/12, height: 60)
+                
+                .frame(width: 50, height: 60)
             Spacer()
             Text(String(self.swimmer.stringTime))
-                .fixedSize()
-                .frame(width: (UIScreen.main.bounds.width/5), height: 60)
+                
+                .frame(width: (70), height: 60)
             Spacer()
             Text("\(self.swimmer.lap * self.swimmer.lapLength) m")
-                .fixedSize()
-                .frame(width: UIScreen.main.bounds.width/16, height: 60)
+                
+                .frame(width: 30, height: 60)
             Spacer()
         }
-        .frame(width: UIScreen.main.bounds.width*0.85, height: 65.0)
+        .frame(width: 350, height: 60.0)
 //        .background(LinearGradient(gradient: Gradient(colors: [Color(.lightGray),Color(.lightGray).opacity(0.5)]), startPoint: .leading, endPoint: .trailing).opacity(0.2))
 
             .overlay(RoundedRectangle(cornerRadius: 6).stroke(self.swimmer.lap * self.swimmer.lapLength >= self.swimmer.distance ? Color.green : Color.red, lineWidth: 5))
+            .padding(.vertical)
 //            .shadow(radius: 10)
 
     }

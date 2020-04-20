@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1813DA2C241E40C600688BAE /* Swim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813DA2B241E40C600688BAE /* Swim.swift */; };
+		180B3016244E3DBE00B620CB /* logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B3015244E3DBE00B620CB /* logic.swift */; };
 		183223F224294F2E0015BA3D /* RunDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183223F124294F2E0015BA3D /* RunDetail.swift */; };
 		1856D6C8243152F60029307C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1856D6C6243152F60029307C /* Model.xcdatamodeld */; };
 		186BFC47241A7FDE0035A0DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186BFC46241A7FDE0035A0DF /* AppDelegate.swift */; };
@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1813DA2B241E40C600688BAE /* Swim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Swim.swift; path = "../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/Swim.swift"; sourceTree = "<group>"; };
+		180B3015244E3DBE00B620CB /* logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logic.swift; sourceTree = "<group>"; };
 		183223F124294F2E0015BA3D /* RunDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunDetail.swift; sourceTree = "<group>"; };
 		1856D6C7243152F60029307C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		186BFC43241A7FDE0035A0DF /* CoachTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoachTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +78,7 @@
 				183223F124294F2E0015BA3D /* RunDetail.swift */,
 				186BFC5A241A7FFE0035A0DF /* SwimmerView.swift */,
 				186EDD2B2424207F00D4D4BC /* SwimmerDetail.swift */,
-				1813DA2B241E40C600688BAE /* Swim.swift */,
+				180B3015244E3DBE00B620CB /* logic.swift */,
 				1856D6C6243152F60029307C /* Model.xcdatamodeld */,
 				186BFC4C241A7FE00035A0DF /* Assets.xcassets */,
 				186BFC51241A7FE00035A0DF /* LaunchScreen.storyboard */,
@@ -167,9 +167,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1813DA2C241E40C600688BAE /* Swim.swift in Sources */,
 				183223F224294F2E0015BA3D /* RunDetail.swift in Sources */,
 				186BFC47241A7FDE0035A0DF /* AppDelegate.swift in Sources */,
+				180B3016244E3DBE00B620CB /* logic.swift in Sources */,
 				1876271924292DE2001470D9 /* savedView.swift in Sources */,
 				186BFC49241A7FDE0035A0DF /* SceneDelegate.swift in Sources */,
 				1876271D24293242001470D9 /* savedDetail.swift in Sources */,
@@ -325,9 +325,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tri.CoachTimer.2.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -348,9 +348,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tri.CoachTimer.2.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
